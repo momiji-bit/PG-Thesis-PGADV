@@ -1,0 +1,14 @@
+/Geo/Anomaly_Qwen2.5-VL-7B-Instruct/model-00001-of-00004.safetensors
+/Geo/Anomaly_Qwen2.5-VL-7B-Instruct/model-00002-of-00004.safetensors
+/Geo/Anomaly_Qwen2.5-VL-7B-Instruct/model-00003-of-00004.safetensors
+/Geo/Anomaly_Qwen2.5-VL-7B-Instruct/model-00004-of-00004.safetensors
+/preds/
+/transformers/
+/ckpts/
+/preds/
+/transformers/
+/ckpts_prompt/
+/ckpts/
+/Geo/Anomaly_Qwen2.5-VL-7B-Instruct/
+/dataset/
+/.idea/
