@@ -18,6 +18,14 @@ cd PG-Thesis-TGADV
 
 ```
 
+```bash
+conda create -n TGADV python=3.12
+conda activate TGADV
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+pip install transformers==4.52.4 accelerate qwen-vl-utils[decord] opencv-python matplotlib
+
+```
+
 
 
 ## 📂 2. Data preparation
@@ -46,7 +54,8 @@ gdown --fuzzy https://drive.google.com/file/d/1nWqTMzWLorg2DX7WX51Czhe4ayY_MHC8/
 ```bash
 mkdir dataset
 huggingface-cli download Geo2425/ShanghaiTech_Campus --local-dir dataset --repo-type dataset
-unzip 
+unzip dataset/train.zip -d dataset/train
+
 ```
 
 
