@@ -25,8 +25,16 @@ We propose an anomaly detection framework based on the Qwen2.5-VL-7B-Instruct mu
 ## 📦 1. Installation
 
 ```bash
-git https://github.com/momiji-bit/PG-Thesis-TGADV.git
+git clone https://github.com/momiji-bit/PG-Thesis-TGADV.git
 cd PG-Thesis-TGADV
+
+```
+
+```bash
+conda create -n TGADV python=3.12
+conda activate TGADV
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+pip install transformers==4.52.4 accelerate qwen-vl-utils[decord] opencv-python matplotlib chardet ipywidgets
 
 ```
 
@@ -36,22 +44,45 @@ cd PG-Thesis-TGADV
 
 ### 2.1 Pretrained Model
 
+```bash
+pip install huggingface_hub
+mkdir Geo/Anomaly_Qwen2.5-VL-7B-Instruct
+huggingface-cli login
+huggingface-cli download Geo2425/Anomaly_Qwen2.5-VL-7B-Instruct --local-dir Geo/Anomaly_Qwen2.5-VL-7B-Instruct
+
 ```
+
+### 2.2 Heatmap Decoder
+
+```bash
+pip install gdown
+mkdir ckpts
+gdown --fuzzy https://drive.google.com/file/d/1nWqTMzWLorg2DX7WX51Czhe4ayY_MHC8/view?usp=sharing -O ckpts/step006800.pth
+
 ```
 
-### 2.2 Datasets (ShanghaiTech Campus)
+### 2.3 ShanghaiTech Campus Dataset
 
+```bash
+huggingface-cli download Geo2425/ShanghaiTech_Campus --local-dir dataset --repo-type dataset
+unzip dataset/train.zip -d dataset/train
+unzip dataset/val.zip -d dataset/val
+unzip dataset/masked.zip -d dataset/masked
+unzip dataset/gt.zip -d dataset/gt
 ```
-```
+
+## ✅ 3. Demo & Debug
+
+- **Phase 1:** Please run `Phase_1_Demo.ipynb` to reproduce the Anomaly video heatmap Decoder experimental results.
 
 
 
-## 🏋️‍♂️ 3. Training & Testing
+## 🏋️‍♂️ 4. Training & Testing
 
 
 
 
 
-## 📧 4. Contact
+## 📧 5. Contact
 
 For any questions, feel free to contact: Mr. Jihao Gu (jihao.gu.23@ucl.ac.uk).
