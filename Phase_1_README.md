@@ -1,7 +1,6 @@
 # Phase 1: Anomaly video heatmap Decoder
 
 <p align="center">
-  <a href="https://arxiv.org/abs/" target="_blank"><img src="https://img.shields.io/badge/arXiv-Upcoming-red?logo=arxiv"></a>
   <a href="https://huggingface.co/datasets/Geo2425/ShanghaiTech_Campus" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-orange"></a>
   <a href="https://huggingface.co/Geo2425/Anomaly_Qwen2.5-VL-7B-Instruct" target="_blank"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-orange"></a>
   <a href="https://drive.google.com/drive/folders/1cIISTK_XLcwCBgUw9wfyF8ABrh26nZuV?usp=sharing" target="_blank"><img src="https://img.shields.io/badge/Google%20Drive-Decoder
@@ -22,7 +21,7 @@ cd PG-Thesis-TGADV
 conda create -n TGADV python=3.12
 conda activate TGADV
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu128
-pip install transformers==4.52.4 accelerate qwen-vl-utils[decord] opencv-python matplotlib chardet
+pip install transformers==4.52.4 accelerate qwen-vl-utils[decord] opencv-python matplotlib chardet ipywidgets
 
 ```
 
@@ -62,7 +61,7 @@ unzip dataset/train.zip -d dataset/train
 
 ## ✅ 3. Demo & Debug
 
-
+Please run `Phase_1_Demo.ipynb` to reproduce the main experimental results.
 
 ## 📧 4. Contact
 
