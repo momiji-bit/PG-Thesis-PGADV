@@ -22,7 +22,7 @@ cd PG-Thesis-TGADV
 conda create -n TGADV python=3.12
 conda activate TGADV
 pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu128
-pip install transformers==4.52.4 accelerate qwen-vl-utils[decord] opencv-python matplotlib
+pip install transformers==4.52.4 accelerate qwen-vl-utils[decord] opencv-python matplotlib chardet
 
 ```
 
