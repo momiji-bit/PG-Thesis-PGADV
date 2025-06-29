@@ -238,10 +238,10 @@ def main():
 
     # 1. 模型与处理器 -------------------------------------------------------
     model = Anomaly_Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        "Geo/Anomaly_Qwen2.5-VL-7B-Instruct", torch_dtype="auto", device_map="auto"
+        "../Geo/Anomaly_Qwen2.5-VL-7B-Instruct", torch_dtype="auto", device_map="auto"
     )
     processor = Qwen2_5_VLProcessor.from_pretrained(
-        "Geo/Anomaly_Qwen2.5-VL-7B-Instruct"
+        "../Geo/Anomaly_Qwen2.5-VL-7B-Instruct"
     )
 
     # 冻结全部，再解冻 prompt_learner

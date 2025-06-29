@@ -187,7 +187,7 @@ def train_one_epoch(
 
     # 用于统计训练过程中已观察样本的 mIoU
     inter, union = 0, 0
-    curve_save_path = os.path.join('.', 'Stage-1_Train-curve.png') if pred_save_dir is not None else None
+    curve_save_path = os.path.join('..', 'Phase_1_Train_curve.png') if pred_save_dir is not None else None
     loss_list, miou_list, step_list = [], [], []
 
     progress = tqdm(loader, desc=f"train(E{epoch})", ncols=160)
@@ -417,7 +417,7 @@ def main():
     parser.add_argument("--batch_size", type=int, default=1)
     parser.add_argument("--lr",   type=float, default=1e-5)   # 保留原始初始 LR
     # ==== 新增：动态 LR 的上下限与调节系数 ====
-    parser.add_argument("--lr_min",         type=float, default=1e-7, help="动态调整时的最小学习率下界")
+    parser.add_argument("--lr_min",         type=float, default=1e-8, help="动态调整时的最小学习率下界")
     parser.add_argument("--lr_max",         type=float, default=1e-3, help="动态调整时的最大学习率上界")
     parser.add_argument("--lr_up_factor",   type=float, default=1.001, help="mIoU 提升时，LR 乘以该系数")
     parser.add_argument("--lr_down_factor", type=float, default=0.995, help="mIoU 未提升时，LR 乘以该系数（<1）")
@@ -436,12 +436,12 @@ def main():
 
     # ---------- 模型 & 处理器 ---------- #
     model = Anomaly_Qwen2_5_VLForConditionalGeneration.from_pretrained(
-        "Geo/Anomaly_Qwen2.5-VL-7B-Instruct",
+        "../Geo/Anomaly_Qwen2.5-VL-7B-Instruct",
         torch_dtype="auto",
         device_map="auto",
     )
     processor = Qwen2_5_VLProcessor.from_pretrained(
-        "Geo/Anomaly_Qwen2.5-VL-7B-Instruct"
+        "../Geo/Anomaly_Qwen2.5-VL-7B-Instruct"
     )
 
     # 只训练 anomaly_maps_decoder

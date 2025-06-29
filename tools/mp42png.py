@@ -38,4 +38,4 @@ def export_video_frames_as_png(video_path, save_path='output.png', resize=None, 
 
 # 示例调用
 video_path = "masked_black.mp4"  # 替换为你的MP4路径
-export_video_frames_as_png(video_path, save_path="all_frames.png")
+export_video_frames_as_png(video_path, save_path="../all_frames.png")
