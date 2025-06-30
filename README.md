@@ -73,7 +73,10 @@ unzip dataset/gt.zip -d dataset/gt
 
 ## ✅ 3. Demo & Debug
 
-- **Phase 1:** Please run `Phase_1_Demo.ipynb` to reproduce the Anomaly video heatmap Decoder experimental results.
+- **Phase 1:** Please run `Phase_1_Demo.ipynb` to reproduce the **Anomaly video heatmap Decoder** experimental results.
+- **🚧Phase 2:** Please run `Phase_2_Demo.ipynb` to reproduce the **Learnable Prompt Encoder** experimental results.
+- **🚧Phase 3:**  ...
+- **🚧Phase 4:**  ...
 
 
 
