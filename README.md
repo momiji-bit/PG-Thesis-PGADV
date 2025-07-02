@@ -80,9 +80,7 @@ unzip dataset/gt.zip -d dataset/gt
 
 
 
-## 🏋️‍♂️ 4. Training & Testing
-
-
+## 🏋️‍♂️ 4. Training
 
 
 
