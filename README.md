@@ -1,4 +1,4 @@
-# TGADV: Text-guided Anomaly Detection in Videos
+# PGADV: Pext-guided Anomaly Detection in Videos
 
 <p align="center">
   <a href="https://arxiv.org/abs/" target="_blank"><img src="https://img.shields.io/badge/arXiv-Upcoming-red?logo=arxiv"></a>
